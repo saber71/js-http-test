@@ -8,6 +8,18 @@ const axiosInstance = axiosCookieJarSupport.wrapper(axios)
 const cookieJar = new CookieJar()
 let token = ""
 
+const defaultAxiosConfig: AxiosRequestConfig = {
+  baseURL: "http://localhost:3000/",
+  withCredentials: true,
+  jar: cookieJar,
+  validateStatus: () => true
+}
+
+// 覆盖掉默认的axios配置
+export function setDefaultAxiosConfig(config: AxiosRequestConfig) {
+  Object.assign(defaultAxiosConfig, config)
+}
+
 /* 调用axios发起请求，返回准备对Response内容进行测试的对象 */
 export function httpTest<Data = any>(config: AxiosRequestConfig | (() => AxiosRequestConfig)) {
   if (typeof config === "function") config = config()
@@ -16,10 +28,7 @@ export function httpTest<Data = any>(config: AxiosRequestConfig | (() => AxiosRe
   return new ExpectResponse<Data>(
     axiosInstance
       .request({
-        baseURL: "http://localhost:3000/",
-        withCredentials: true,
-        jar: cookieJar,
-        validateStatus: () => true,
+        ...defaultAxiosConfig,
         ...config
       })
       .then((res) => ({
