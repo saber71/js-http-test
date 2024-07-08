@@ -1,0 +1,36 @@
+{
+  "name": "@heraclius/http-test",
+  "version": "0.1.0",
+  "description": "封装axios，与vitest配合以实现对restful api的单元测试",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@heraclius/external-deps-plugin": "^0.1.1",
+    "@types/node": "^20.14.10",
+    "@types/tough-cookie": "^4.0.5",
+    "axios": "^1.6.7",
+    "axios-cookiejar-support": "^5.0.0",
+    "tough-cookie": "^4.1.4",
+    "unplugin-swc": "^1.5.1",
+    "vite": "^5.3.3",
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "axios": "^1.6.7",
+    "axios-cookiejar-support": "^5.0.0",
+    "tough-cookie": "^4.1.4",
+    "vitest": "^1.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ]
+}
