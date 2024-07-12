@@ -1,6 +1,6 @@
 {
   "name": "@heraclius/http-test",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "封装axios，与vitest配合以实现对restful api的单元测试",
   "type": "module",
   "main": "dist/index.js",
