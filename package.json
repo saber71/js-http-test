@@ -1,6 +1,6 @@
 {
   "name": "@heraclius/http-test",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "封装axios，与vitest配合以实现对restful api的单元测试",
   "type": "module",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@heraclius/external-deps-plugin": "^0.1.1",
+    "@heraclius/external-deps-plugin": "^1.0.0",
     "@types/node": "^20.14.11",
     "@types/tough-cookie": "^4.0.5",
     "axios": "^1.7.2",
