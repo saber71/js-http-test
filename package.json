@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@heraclius/external-deps-plugin": "^1.1.0",
-    "@types/node": "^22.8.6",
+    "@types/node": "^22.9.0",
     "@types/tough-cookie": "^4.0.5",
     "axios": "^1.7.7",
     "axios-cookiejar-support": "^5.0.3",
